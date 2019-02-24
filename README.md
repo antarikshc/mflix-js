@@ -1,6 +1,5 @@
-=====
-Mflix
-=====
+MFlix
+-----------------
 
 This is a short guide on setting up the system and environment dependencies
 required for the MFlix application to run.
@@ -40,8 +39,6 @@ The dependencies for the MFlix application should be downloaded using the
 
 Once ``npm`` is installed, you can install the MFlix dependencies by running the
 following command from the **mflix-js** directory:
-
-.. code-block:: sh
 
   npm install
 
@@ -92,8 +89,6 @@ course, software has a strange habit of living a long time.
 
 When you've edited the file, rename it to **.env** with the following command:
 
-.. code-block:: sh
-
   mv dotenv_unix .env  # on Unix
   ren dotenv_win .env  # on Windows
 
@@ -103,12 +98,12 @@ Terminal, so if you need to edit it again, you can open it from there:
 
 In the **mflix-js** directory, run the following commands:
 
-.. code-block:: sh
-
-  # install MFlix dependencies
+  **install MFlix dependencies**
+  
   npm install
 
-  # start the MFlix application
+  **start the MFlix application**
+  
   npm start
 
 This will start the application. You can then access the MFlix application at
@@ -125,8 +120,6 @@ project's dependencies, so ``npm install`` should install everything you need.
 Each course lab contains a module of unit tests that you can call individually
 with ``npm test``. For example, to run the test **connection-pooling.test.js**,
 run the command:
-
-.. code-block:: sh
 
   npm test -t connection-pooling
 
