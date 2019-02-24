@@ -244,21 +244,13 @@ export default class MoviesDAO {
         .find(query)
         .project(project)
         .sort(sort)
+        .skip(page * moviesPerPage)
+        .limit(moviesPerPage)
     } catch (e) {
       console.error(`Unable to issue find command, ${e}`)
       return { moviesList: [], totalNumMovies: 0 }
     }
 
-    /**
-    Ticket: Paging
-
-    Before this method returns back to the API, use the "moviesPerPage" and
-    "page" arguments to decide the movies to display.
-
-    Paging can be implemented by using the skip() and limit() cursor methods.
-    */
-
-    // TODO Ticket: Paging
     // Use the cursor to only return the movies that belong on the current page
     const displayCursor = cursor.limit(moviesPerPage)
 
